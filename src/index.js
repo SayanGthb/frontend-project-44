@@ -18,6 +18,8 @@ const app = (description, typeGame) => {
   // цикл
   for (let i = 0; i < 3; i += 1) {
     const [question, answer] = typeGame();
+    // console.log([question, answer]);
+    // console.log(typeof (question), typeof (answer));
     console.log(`Question: ${question}`); // Question: 4 + 10
     const userAnswer = readlineSync.question('Your answer: '); // Your answer: 14
     // проверка
