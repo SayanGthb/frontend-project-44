@@ -13,7 +13,7 @@ const app = (description, typeGame) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
-  console.log(description); // 'Answer "yes" if the number is even, otherwise answer "no".'
+  console.log(description); // вопрос игры
 
   // цикл
   for (let i = 0; i < 3; i += 1) {
@@ -21,7 +21,7 @@ const app = (description, typeGame) => {
     // console.log([question, answer]);
     // console.log(typeof (question), typeof (answer));
     console.log(`Question: ${question}`); // Question: 4 + 10
-    const userAnswer = readlineSync.question('Your answer: '); // Your answer: 14
+    const userAnswer = readlineSync.question('Your answer: '); // Ответ пользователя
     // проверка
     if (answer === userAnswer) {
       if (i === 2) {
