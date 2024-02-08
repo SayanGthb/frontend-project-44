@@ -6,10 +6,10 @@ const MIN_RANDOM = 1;
 const MAX_RANDOM = 100;
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);
 
-const game = () => {
+const isEven = () => {
   const question = getRandomNumber(MIN_RANDOM, MAX_RANDOM);
   const answer = question % 2 === 0 ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => app(description, game);
+export default () => app(description, isEven);

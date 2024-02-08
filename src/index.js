@@ -20,7 +20,7 @@ const app = (description, typeGame) => {
     const [question, answer] = typeGame();
     // console.log([question, answer]);
     // console.log(typeof (question), typeof (answer));
-    console.log(`Question: ${question}`); // Question: 4 + 10
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: '); // Ответ пользователя
     // проверка
     if (answer === userAnswer) {
