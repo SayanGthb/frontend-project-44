@@ -29,17 +29,17 @@ make install
 
 ## Демонстрации игр: 
 
-### brain-even
+### Определение четного числа
 [![asciicast](https://asciinema.org/a/AQaB9UYqFYjjxIAKBY7AQ14eq.svg)](https://asciinema.org/a/AQaB9UYqFYjjxIAKBY7AQ14eq)
 
-### brain-calc
+### Калькулятор. Арифметические выражения, которые необходимо вычислить.
 [![asciicast](https://asciinema.org/a/ZEPNyttUqRnNMkUUqjNAyIOZY.svg)](https://asciinema.org/a/ZEPNyttUqRnNMkUUqjNAyIOZY)
 
-### brain-gcd
+### Определение наибольшего общего делителя.
 [![asciicast](https://asciinema.org/a/637049.svg)](https://asciinema.org/a/637049)
 
-### brain-progression
+### Прогрессия. Поиск пропущенных чисел в последовательности чисел.
 [![asciicast](https://asciinema.org/a/637050.svg)](https://asciinema.org/a/637050)
 
-### brain-prime
+### Определение простого числа.
 [![asciicast](https://asciinema.org/a/637052.svg)](https://asciinema.org/a/637052)
