@@ -11,15 +11,15 @@ Node.js последней версии
 
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
 
--Калькулятор. Арифметические выражения, которые необходимо вычислить.
+- Калькулятор. Арифметические выражения, которые необходимо вычислить.
 
--Прогрессия. Поиск пропущенных чисел в последовательности чисел.
+- Прогрессия. Поиск пропущенных чисел в последовательности чисел.
 
--Определение четного числа.
+- Определение четного числа.
 
--Определение наибольшего общего делителя.
+- Определение наибольшего общего делителя.
 
--Определение простого числа.
+- Определение простого числа.
 
 ## Установка
 
@@ -29,17 +29,17 @@ make install
 
 ## Демонстрации игр: 
 
-### asciinema brain-even
+### brain-even
 [![asciicast](https://asciinema.org/a/AQaB9UYqFYjjxIAKBY7AQ14eq.svg)](https://asciinema.org/a/AQaB9UYqFYjjxIAKBY7AQ14eq)
 
-### asciinema brain-calc
+### brain-calc
 [![asciicast](https://asciinema.org/a/ZEPNyttUqRnNMkUUqjNAyIOZY.svg)](https://asciinema.org/a/ZEPNyttUqRnNMkUUqjNAyIOZY)
 
-### asciinema brain-gcd
+### brain-gcd
 [![asciicast](https://asciinema.org/a/637049.svg)](https://asciinema.org/a/637049)
 
-### asciinema brain-progression
+### brain-progression
 [![asciicast](https://asciinema.org/a/637050.svg)](https://asciinema.org/a/637050)
 
-### asciinema brain-prime
+### brain-prime
 [![asciicast](https://asciinema.org/a/637052.svg)](https://asciinema.org/a/637052)
