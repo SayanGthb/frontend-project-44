@@ -8,22 +8,23 @@ const MAX_RANDOM = 100;
 const MAX_STEP = 5; // максимальный шаг прогрессии
 const lengthArrayFirst = 5; // минимальная длина массива
 const lengthArrayLast = 15; // максимальная длина массива
-const array = [];
 
-const lengthArray = getRandomNumber(lengthArrayFirst, lengthArrayLast); // длина массива
-let firstElementArray = getRandomNumber(MIN_RANDOM, MAX_RANDOM); // первое число
-const step = getRandomNumber(MIN_RANDOM, MAX_STEP); // шаг прогрессии
-
-const game = () => {
+const getProgression = (start, step, length) => {
+  const array = [];
   let i = 0;
-
-  // формирование массива
-  while (i <= lengthArray) {
-    array[i] = firstElementArray;
-    firstElementArray += step;
+  while (i <= length) {
+    array[i] = start;
+    start += step;
     i += 1;
   }
+  return array;
+};
 
+const getAnswer = () => {
+  const lengthArray = getRandomNumber(lengthArrayFirst, lengthArrayLast); // длина массива
+  const firstElementArray = getRandomNumber(MIN_RANDOM, MAX_RANDOM); // первое число
+  const stepProgression = getRandomNumber(MIN_RANDOM, MAX_STEP); // шаг прогрессии
+  const array = getProgression(firstElementArray, stepProgression, lengthArray); // формирование массива
   const pointsIndex = getRandomNumber(0, lengthArray); // индекс точек
   const answer = array[pointsIndex]; // скрытое точками число
   array[pointsIndex] = '..';
@@ -33,4 +34,4 @@ const game = () => {
   return [question, String(answer)];
 };
 
-export default () => app(description, game);
+export default () => app(description, getAnswer);
