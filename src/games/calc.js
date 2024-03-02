@@ -1,11 +1,11 @@
 import app from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
 const MIN_RANDOM = 1;
 const MAX_RANDOM = 50;
 const signArray = ['+', '-', '*'];
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);
 let answer;
 
 const getRound = () => {

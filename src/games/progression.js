@@ -1,4 +1,5 @@
 import app from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
@@ -8,8 +9,6 @@ const MAX_STEP = 5; // максимальный шаг прогрессии
 const lengthArrayFirst = 5; // минимальная длина массива
 const lengthArrayLast = 15; // максимальная длина массива
 const array = [];
-
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);
 
 const lengthArray = getRandomNumber(lengthArrayFirst, lengthArrayLast); // длина массива
 let firstElementArray = getRandomNumber(MIN_RANDOM, MAX_RANDOM); // первое число

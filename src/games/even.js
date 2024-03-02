@@ -1,11 +1,11 @@
 import app from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const MIN_RANDOM = 1;
 const MAX_RANDOM = 100;
 const answerArray = ['yes', 'no'];
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max + 1 - min) + min);
 
 const isEven = (number) => number % 2 === 0;
 
