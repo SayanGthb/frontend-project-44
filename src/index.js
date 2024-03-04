@@ -20,7 +20,7 @@ const generateRound = (description, typeGame) => {
   // цикл
   for (let i = 0; i < roundCount; i += 1) {
     const [question, answer] = typeGame();
-    // console.log([question, answer]);
+    console.log([question, answer]);
     // console.log(typeof (question), typeof (answer));
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('Your answer: '); // Ответ пользователя

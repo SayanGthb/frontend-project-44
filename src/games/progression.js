@@ -25,7 +25,7 @@ const getAnswer = () => {
   const lengthArray = getRandomNumber(lengthArrayFirst, lengthArrayLast); // длина массива
   const firstElementArray = getRandomNumber(MIN_RANDOM, MAX_RANDOM); // первое число
   const stepProgression = getRandomNumber(MIN_RANDOM, MAX_STEP); // шаг прогрессии
-  const array = getProgression(firstElementArray, stepProgression, lengthArray); // формирование массива
+  const array = getProgression(firstElementArray, stepProgression, lengthArray); // массив
   const pointsIndex = getRandomNumber(0, lengthArray); // индекс точек
   const answer = array[pointsIndex]; // скрытое точками число
   array[pointsIndex] = '..';
