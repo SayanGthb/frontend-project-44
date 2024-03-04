@@ -1,4 +1,4 @@
-import app from '../index.js';
+import generateRound from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'What number is missing in the progression?';
@@ -35,4 +35,4 @@ const getAnswer = () => {
   return [question, String(answer)];
 };
 
-export default () => app(description, getAnswer);
+export default () => generateRound(description, getAnswer);

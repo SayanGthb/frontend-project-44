@@ -1,4 +1,4 @@
-import app from '../index.js';
+import generateRound from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -16,4 +16,4 @@ const game = () => {
   return [question, String(answer)];
 };
 
-export default () => app(description, game);
+export default () => generateRound(description, game);

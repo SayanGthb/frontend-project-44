@@ -1,4 +1,4 @@
-import app from '../index.js';
+import generateRound from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -15,4 +15,4 @@ const getAnswer = () => {
   return [question, answer];
 };
 
-export default () => app(description, getAnswer);
+export default () => generateRound(description, getAnswer);
