@@ -9,14 +9,16 @@ import readlineSync from 'readline-sync';
 // 6. проверить
 // 7. выдать ответ: правильно / неправильно
 
-const app = (description, typeGame) => {
+const roundCount = 3;
+
+const generateRound = (description, typeGame) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   console.log(description); // вопрос игры
 
   // цикл
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < roundCount; i += 1) {
     const [question, answer] = typeGame();
     // console.log([question, answer]);
     // console.log(typeof (question), typeof (answer));
@@ -38,4 +40,4 @@ const app = (description, typeGame) => {
   }
 };
 
-export default app;
+export default generateRound;
