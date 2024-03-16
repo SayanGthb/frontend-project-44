@@ -13,9 +13,7 @@ const getProgression = (start, step, length) => {
   const array = [];
   let i = 0;
   while (i <= length) {
-    array[i] = start;
-    // eslint-disable-next-line no-param-reassign
-    start += step;
+    array[i] = start + step * i;
     i += 1;
   }
   return array;
