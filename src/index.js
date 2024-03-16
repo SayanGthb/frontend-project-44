@@ -1,23 +1,13 @@
 import readlineSync from 'readline-sync';
 
-// 1. приветствие
-// 2. запросить имя
-// 3. вывестиn правила игры
-//  в цикле  3 раза
-// 4. задать вопрос
-// 5. получить ответ пользователя
-// 6. проверить
-// 7. выдать ответ: правильно / неправильно
-
 const roundCount = 3;
 
-const generateRound = (description, typeGame) => {
+const runGame = (description, typeGame) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${name}!`);
   console.log(description); // вопрос игры
 
-  // цикл
   for (let i = 0; i < roundCount; i += 1) {
     const [question, answer] = typeGame();
     // console.log([question, answer]);
@@ -40,4 +30,4 @@ const generateRound = (description, typeGame) => {
   }
 };
 
-export default generateRound;
+export default runGame;
