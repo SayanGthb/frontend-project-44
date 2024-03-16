@@ -17,11 +17,13 @@ const getRound = () => {
     '*': randomNumber * randomNumber2,
   };
 
-  const randomIndexSignArray = getRandomNumber(MIN_RANDOM, Object.keys(signObj).length);
+  const signObjKeysArray = Object.keys(signObj);
 
-  const question = `${randomNumber} ${Object.keys(signObj)[randomIndexSignArray - 1]} ${randomNumber2}`;
+  const randomIndexSignArray = getRandomNumber(MIN_RANDOM, signObjKeysArray.length);
 
-  answer = signObj[Object.keys(signObj)[randomIndexSignArray - 1]];
+  const question = `${randomNumber} ${signObjKeysArray[randomIndexSignArray - 1]} ${randomNumber2}`;
+
+  answer = signObj[signObjKeysArray[randomIndexSignArray - 1]];
 
   return [question, String(answer)];
 };
