@@ -1,4 +1,4 @@
-import generateRound from '../index.js';
+import runGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
@@ -8,10 +8,10 @@ const MAX_RANDOM = 100;
 
 const isEven = (number) => number % 2 === 0;
 
-const getAnswer = () => {
+const generateRound = () => {
   const question = getRandomNumber(MIN_RANDOM, MAX_RANDOM);
   const answer = isEven(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
-export default () => generateRound(description, getAnswer);
+export default () => runGame(description, generateRound);

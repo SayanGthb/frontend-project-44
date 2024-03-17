@@ -1,36 +1,36 @@
-import generateRound from '../index.js';
+import runGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
 const MIN_RANDOM = 1;
 const MAX_RANDOM = 100;
-const MAX_STEP = 5; // максимальный шаг прогрессии
-const lengthArrayFirst = 5; // минимальная длина массива
-const lengthArrayLast = 15; // максимальная длина массива
+const MAX_STEP = 5;
+const MIN_PROGRESSION_LENGTH = 5;
+const MAX_PROGRESSION_LENGTH = 15;
 
 const getProgression = (start, step, length) => {
-  const array = [];
+  const progression = [];
   let i = 0;
   while (i <= length) {
-    array[i] = start + step * i;
+    progression[i] = start + step * i;
     i += 1;
   }
-  return array;
+  return progression;
 };
 
-const getAnswer = () => {
-  const lengthArray = getRandomNumber(lengthArrayFirst, lengthArrayLast); // длина массива
-  const firstElementArray = getRandomNumber(MIN_RANDOM, MAX_RANDOM); // первое число
-  const stepProgression = getRandomNumber(MIN_RANDOM, MAX_STEP); // шаг прогрессии
-  const array = getProgression(firstElementArray, stepProgression, lengthArray); // массив
-  const pointsIndex = getRandomNumber(0, lengthArray); // индекс точек
-  const answer = array[pointsIndex]; // скрытое точками число
+const generateRound = () => {
+  const lengthArray = getRandomNumber(MIN_PROGRESSION_LENGTH, MAX_PROGRESSION_LENGTH);
+  const firstElementArray = getRandomNumber(MIN_RANDOM, MAX_RANDOM);
+  const stepProgression = getRandomNumber(MIN_RANDOM, MAX_STEP);
+  const array = getProgression(firstElementArray, stepProgression, lengthArray);
+  const pointsIndex = getRandomNumber(0, lengthArray);
+  const answer = array[pointsIndex];
   array[pointsIndex] = '..';
 
-  const question = array.join(' '); // массив в строку
+  const question = array.join(' ');
 
   return [question, String(answer)];
 };
 
-export default () => generateRound(description, getAnswer);
+export default () => runGame(description, generateRound);

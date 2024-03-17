@@ -1,31 +1,28 @@
-import generateRound from '../index.js';
+import runGame from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
 const MIN_RANDOM = 1;
 const MAX_RANDOM = 50;
-let answer;
 
-const getRound = () => {
-  const randomNumber = getRandomNumber(MIN_RANDOM, MAX_RANDOM);
-  const randomNumber2 = getRandomNumber(MIN_RANDOM, MAX_RANDOM);
+const signObj = {
+  '+': (a, b) => a + b,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
+};
 
-  const signObj = {
-    '+': randomNumber + randomNumber2,
-    '-': randomNumber - randomNumber2,
-    '*': randomNumber * randomNumber2,
-  };
+const signs = Object.keys(signObj);
 
-  const signObjKeysArray = Object.keys(signObj);
-
-  const randomIndexSignArray = getRandomNumber(MIN_RANDOM, signObjKeysArray.length);
-
-  const question = `${randomNumber} ${signObjKeysArray[randomIndexSignArray - 1]} ${randomNumber2}`;
-
-  answer = signObj[signObjKeysArray[randomIndexSignArray - 1]];
+const generateRound = () => {
+  const a = getRandomNumber(MIN_RANDOM, MAX_RANDOM);
+  const b = getRandomNumber(MIN_RANDOM, MAX_RANDOM);
+  const randomSignIndex = getRandomNumber(MIN_RANDOM, signs.length);
+  const sign = signs[randomSignIndex - 1];
+  const question = `${a} ${sign} ${b}`;
+  const answer = signObj[sign](a, b);
 
   return [question, String(answer)];
 };
 
-export default () => generateRound(description, getRound);
+export default () => runGame(description, generateRound);
